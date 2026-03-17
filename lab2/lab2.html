@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Student Profile</h1>
+      <p>Reg No: 23/EG/CO/047</p>
+    </header>
+
+    <nav>
+      <a href="#profile">Profile</a> |
+      <a href="#students">Students</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section id="profile">
+        <article>
+          <h2>Profile Overview</h2>
+          <figure>
+            <img src="profile.svg" alt="Profile photo" />
+            <figcaption>Local profile image</figcaption>
+          </figure>
+          <p>
+            This page demonstrates advanced HTML elements including semantic
+            structure, tables, and forms.
+          </p>
+        </article>
+      </section>
+
+      <section id="students">
+        <h2>Student Table</h2>
+        <table border="1">
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Major</th>
+          </tr>
+          <tr>
+            <td>John Doe</td>
+            <td>21</td>
+            <td>Computer Science</td>
+          </tr>
+          <tr>
+            <td>Mary Okon</td>
+            <td>20</td>
+            <td>Computer Engineering</td>
+          </tr>
+          <tr>
+            <td>David James</td>
+            <td>22</td>
+            <td>Electrical Engineering</td>
+          </tr>
+          <tr>
+            <td>Grace Udoh</td>
+            <td>19</td>
+            <td>Information Systems</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Form</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <br />
+
+          <fieldset>
+            <legend>Gender</legend>
+            <label>
+              <input type="radio" name="gender" value="male" />
+              Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" />
+              Female
+            </label>
+          </fieldset>
+
+          <label>
+            <input type="checkbox" name="subscribe" value="yes" />
+            Subscribe to newsletter
+          </label>
+          <br />
+
+          <label for="comments">Comments:</label>
+          <textarea id="comments" name="comments" rows="4"></textarea>
+          <br />
+
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Advanced HTML Elements Lab</p>
+    </footer>
+  </body>
+</html>

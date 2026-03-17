@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      .toggle-box {
+        padding: 10px;
+        background-color: #f0f0f0;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">Original Title</h1>
+    <p>Reg No: 23/EG/CO/047</p>
+    <button onclick="changeTitle()">Change Title</button>
+
+    <h2>Paragraph Color Change</h2>
+    <p id="color-text">This text color will change using JavaScript.</p>
+
+    <h2>Dynamic List</h2>
+    <ul id="dynamic-list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <button onclick="addListItem()">Add List Item</button>
+
+    <h2>Toggle Visibility</h2>
+    <div class="toggle-box">This box can be hidden or shown.</div>
+    <button onclick="toggleBox()">Toggle Box</button>
+
+    <h2>Form Input Display</h2>
+    <label for="message-input">Enter a message:</label>
+    <input type="text" id="message-input" />
+    <button type="button" onclick="showMessage()">Show Message</button>
+    <div id="message-output"></div>
+
+    <script>
+      function changeTitle() {
+        document.getElementById("title").innerHTML = "New Title!";
+      }
+
+      const colorText = document.getElementById("color-text");
+      colorText.style.color = "blue";
+
+      function addListItem() {
+        const list = document.getElementById("dynamic-list");
+        const newItem = document.createElement("li");
+        newItem.textContent = "New Item";
+        list.appendChild(newItem);
+      }
+
+      function toggleBox() {
+        const box = document.querySelector(".toggle-box");
+        if (box.style.display === "none") {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }
+      }
+
+      function showMessage() {
+        const input = document.getElementById("message-input").value;
+        document.getElementById("message-output").textContent = input;
+      }
+
+      const missingElement = document.querySelector(".does-not-exist");
+      if (!missingElement) {
+        console.error("Element with class 'does-not-exist' not found.");
+      }
+    </script>
+  </body>
+</html>

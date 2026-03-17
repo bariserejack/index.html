@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <style>
+      .hover-box {
+        width: 200px;
+        padding: 16px;
+        background-color: #e8e8e8;
+        margin-bottom: 12px;
+      }
+
+      .counter {
+        font-size: 1.2rem;
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events and Interactivity</h1>
+    <p>Reg No: 23/EG/CO/047</p>
+
+    <button id="btn">Click Me</button>
+    <input type="text" id="input" placeholder="Type here" />
+
+    <h2>Mouseover Example</h2>
+    <div class="hover-box" id="hover-box">Hover over me</div>
+
+    <h2>Counter</h2>
+    <div class="counter" id="counter">0</div>
+    <button id="increment">Increase</button>
+
+    <h2>Email Validation</h2>
+    <form id="email-form">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+      <button type="submit">Submit</button>
+    </form>
+    <p id="email-result"></p>
+
+    <h2>Timeout</h2>
+    <p id="timeout-text">This text will change after 5 seconds.</p>
+
+    <h2>Prevent Default</h2>
+    <a href="https://example.com" id="blocked-link">Do not navigate</a>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        alert("Button clicked!");
+      });
+
+      document
+        .getElementById("input")
+        .addEventListener("keyup", function (event) {
+          console.log("Key pressed: " + event.key);
+        });
+
+      const hoverBox = document.getElementById("hover-box");
+      hoverBox.addEventListener("mouseover", function () {
+        hoverBox.style.backgroundColor = "#c2f0c2";
+      });
+      hoverBox.addEventListener("mouseout", function () {
+        hoverBox.style.backgroundColor = "#e8e8e8";
+      });
+
+      let count = 0;
+      document.getElementById("increment").addEventListener("click", function () {
+        count += 1;
+        document.getElementById("counter").textContent = count;
+      });
+
+      document
+        .getElementById("email-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const emailValue = document.getElementById("email").value;
+          const result = document.getElementById("email-result");
+
+          if (emailValue.includes("@")) {
+            result.textContent = "Email looks valid.";
+          } else {
+            result.textContent = "Email must include @.";
+          }
+        });
+
+      setTimeout(function () {
+        document.getElementById("timeout-text").textContent =
+          "Text changed after 5 seconds!";
+      }, 5000);
+
+      document
+        .getElementById("blocked-link")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          alert("Navigation prevented.");
+        });
+    </script>
+  </body>
+</html>

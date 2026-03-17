@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout and Styling with CSS</title>
+    <link rel="stylesheet" href="lab4-styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <h1>CSS Layout Lab</h1>
+        <p>Matric No: 23/EG/CO/047</p>
+      </div>
+      <nav class="site-nav">
+        <a href="#overview">Overview</a>
+        <a href="#cards">Cards</a>
+        <a href="#tips">Tips</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="overview" class="hero">
+        <div>
+          <h2>Responsive Layouts</h2>
+          <p>
+            This page demonstrates Flexbox for navigation and layout alignment,
+            plus CSS Grid for responsive content cards.
+          </p>
+        </div>
+        <div class="hero-highlight">
+          <h3>Key Tools</h3>
+          <ul>
+            <li>Flexbox for row and column alignment</li>
+            <li>Grid for card layouts</li>
+            <li>Media queries for small screens</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="cards" class="card-grid">
+        <article class="card">
+          <h3>Flexbox</h3>
+          <p>Used for the header and split sections.</p>
+        </article>
+        <article class="card">
+          <h3>Grid</h3>
+          <p>Used to arrange the cards responsively.</p>
+        </article>
+        <article class="card">
+          <h3>Media Queries</h3>
+          <p>Adapt layout on smaller screens.</p>
+        </article>
+        <article class="card">
+          <h3>Spacing</h3>
+          <p>Consistent padding and margins for balance.</p>
+        </article>
+      </section>
+
+      <section id="tips" class="split">
+        <div>
+          <h2>Layout Tips</h2>
+          <p>
+            Keep layouts clean by using containers, spacing, and consistent
+            typography to improve readability.
+          </p>
+        </div>
+        <div class="tip-list">
+          <h3>Checklist</h3>
+          <ol>
+            <li>Use flexible units</li>
+            <li>Test on mobile widths</li>
+            <li>Keep navigation simple</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Layout and Styling with CSS - CPE 314</p>
+    </footer>
+  </body>
+</html>
