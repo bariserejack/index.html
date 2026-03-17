@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Dev Labs Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #102a43;
+        --ink-soft: #3e4c59;
+        --accent: #ff8f5e;
+        --accent-2: #1ca7a8;
+        --paper: #f9f7f3;
+        --white: #ffffff;
+        --shadow: 0 16px 40px rgba(16, 42, 67, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Sora", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at top, #fff3e8, transparent 60%),
+          radial-gradient(circle at 10% 20%, #e1f7f6, transparent 45%),
+          linear-gradient(135deg, var(--paper), #f3f7f8);
+        min-height: 100vh;
+      }
+
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px 48px;
+      }
+
+      header {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        align-items: center;
+      }
+
+      .hero {
+        background: var(--white);
+        border-radius: 20px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 0.75rem;
+        color: var(--accent-2);
+        font-weight: 600;
+      }
+
+      h1 {
+        font-family: "Fraunces", serif;
+        font-size: clamp(2rem, 3vw, 2.8rem);
+        margin: 10px 0;
+      }
+
+      .meta {
+        margin: 6px 0 12px;
+        color: var(--ink-soft);
+        font-weight: 500;
+      }
+
+      .summary {
+        color: var(--ink-soft);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .stat {
+        background: #fff4ee;
+        border-radius: 12px;
+        padding: 12px;
+        text-align: center;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.3rem;
+        color: var(--accent);
+      }
+
+      .hero-panel {
+        background: linear-gradient(140deg, #0f172a, #1f2937);
+        color: #f9fafb;
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel h2 {
+        margin: 0 0 12px;
+        font-size: 1.2rem;
+      }
+
+      .hero-panel ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 10px;
+      }
+
+      .hero-panel li {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+      }
+
+      main {
+        margin-top: 32px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: var(--white);
+        border-radius: 16px;
+        padding: 18px;
+        box-shadow: var(--shadow);
+        border-left: 5px solid transparent;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        animation: rise 0.7s ease;
+      }
+
+      .card:nth-child(odd) {
+        border-left-color: var(--accent);
+      }
+
+      .card:nth-child(even) {
+        border-left-color: var(--accent-2);
+      }
+
+      .card h3 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .card a {
+        margin-top: auto;
+        text-decoration: none;
+        background: #111827;
+        color: #ffffff;
+        padding: 10px 12px;
+        border-radius: 10px;
+        font-weight: 600;
+        text-align: center;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .card a:hover {
+        background: #0f172a;
+        transform: translateY(-2px);
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #6b7280;
+        font-size: 0.9rem;
+      }
+
+      @keyframes rise {
+        from {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <section class="hero">
+          <span class="eyebrow">CPE 314 Portfolio</span>
+          <h1>Web Development Lab Projects</h1>
+          <p class="meta">Registration Number: 23/EG/CO/047</p>
+          <p class="summary">
+            A curated collection of HTML, CSS, and JavaScript labs showing
+            progressive improvement from structure to interactivity.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <strong>8</strong>
+              <span>Labs</span>
+            </div>
+            <div class="stat">
+              <strong>3</strong>
+              <span>Core Skills</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span>Portfolio</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="hero-panel">
+          <h2>Highlights</h2>
+          <ul>
+            <li>Semantic HTML & accessible structure</li>
+            <li>Responsive layouts with Flexbox and Grid</li>
+            <li>Dynamic UI with JavaScript events and DOM</li>
+            <li>Integrated to-do list app with storage</li>
+          </ul>
+        </aside>
+      </header>
+
+      <main>
+        <section class="grid">
+          <article class="card">
+            <h3>Lab 1</h3>
+            <p>Basic HTML Webpage</p>
+            <a href="lab1/lab1.html">Open Lab 1</a>
+          </article>
+          <article class="card">
+            <h3>Lab 2</h3>
+            <p>Form Design Project</p>
+            <a href="lab2/lab2.html">Open Lab 2</a>
+          </article>
+          <article class="card">
+            <h3>Lab 3</h3>
+            <p>Responsive Layout Design</p>
+            <a href="lab3/lab3.html">Open Lab 3</a>
+          </article>
+          <article class="card">
+            <h3>Lab 4</h3>
+            <p>Navigation Bar Design</p>
+            <a href="lab4/lab4.html">Open Lab 4</a>
+          </article>
+          <article class="card">
+            <h3>Lab 5</h3>
+            <p>Basic JavaScript Project</p>
+            <a href="lab5/lab5.html">Open Lab 5</a>
+          </article>
+          <article class="card">
+            <h3>Lab 6</h3>
+            <p>DOM Manipulation</p>
+            <a href="lab6/lab6.html">Open Lab 6</a>
+          </article>
+          <article class="card">
+            <h3>Lab 7</h3>
+            <p>JavaScript Events Project</p>
+            <a href="lab7/lab7.html">Open Lab 7</a>
+          </article>
+          <article class="card">
+            <h3>Todo Project</h3>
+            <p>To-Do List Application</p>
+            <a href="todo/todo.html">Open Todo</a>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <p>2026 Web Development Coursework</p>
+        <p>Registration Number: 23/EG/CO/047</p>
+      </footer>
+    </div>
+  </body>
+</html>
