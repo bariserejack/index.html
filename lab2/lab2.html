@@ -6,35 +6,26 @@
     <title>Advanced HTML</title>
   </head>
   <body>
+    <h1>23/EG/CO/047</h1>
+
     <header>
       <h1>Student Profile</h1>
-      <p>Reg No: 23/EG/CO/047</p>
+      <nav>
+        <a href="#profile">Profile</a> |
+        <a href="#students">Students</a> |
+        <a href="#form">Form</a>
+      </nav>
     </header>
 
-    <nav>
-      <a href="#profile">Profile</a> |
-      <a href="#students">Students</a> |
-      <a href="#contact">Contact</a>
-    </nav>
+    <section id="profile">
+      <article>
+        <img
+          src="Neutral portrait with soft lighting.png"
+          alt="Profile Picture"
+          width="150"
+        />
 
-    <main>
-      <section id="profile">
-        <article>
-          <h2>Profile Overview</h2>
-          <figure>
-            <img src="profile.svg" alt="Profile photo" />
-            <figcaption>Local profile image</figcaption>
-          </figure>
-          <p>
-            This page demonstrates advanced HTML elements including semantic
-            structure, tables, and forms.
-          </p>
-        </article>
-      </section>
-
-      <section id="students">
-        <h2>Student Table</h2>
-        <table border="1">
+        <table border="1" id="students">
           <tr>
             <th>Name</th>
             <th>Age</th>
@@ -46,59 +37,65 @@
             <td>Computer Science</td>
           </tr>
           <tr>
-            <td>Mary Okon</td>
-            <td>20</td>
-            <td>Computer Engineering</td>
-          </tr>
-          <tr>
-            <td>David James</td>
+            <td>Jane Smith</td>
             <td>22</td>
-            <td>Electrical Engineering</td>
+            <td>Information Technology</td>
           </tr>
           <tr>
-            <td>Grace Udoh</td>
-            <td>19</td>
-            <td>Information Systems</td>
+            <td>Bob Johnson</td>
+            <td>20</td>
+            <td>Software Engineering</td>
+          </tr>
+          <tr>
+            <td>Alice Brown</td>
+            <td>23</td>
+            <td>Cybersecurity</td>
           </tr>
         </table>
-      </section>
+      </article>
+    </section>
 
-      <section id="contact">
-        <h2>Contact Form</h2>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" />
-          <br />
+    <section id="form">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <br />
 
-          <fieldset>
-            <legend>Gender</legend>
-            <label>
-              <input type="radio" name="gender" value="male" />
-              Male
-            </label>
-            <label>
-              <input type="radio" name="gender" value="female" />
-              Female
-            </label>
-          </fieldset>
+        <label>Gender:</label>
+        <br />
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
+        <br />
+        <br />
 
-          <label>
-            <input type="checkbox" name="subscribe" value="yes" />
-            Subscribe to newsletter
-          </label>
-          <br />
+        <input type="checkbox" id="newsletter" name="newsletter" />
+        <label for="newsletter">Subscribe to newsletter</label>
+        <br />
+        <br />
 
-          <label for="comments">Comments:</label>
-          <textarea id="comments" name="comments" rows="4"></textarea>
-          <br />
+        <label for="comments">Comments:</label>
+        <br />
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          cols="40"
+          placeholder="Write your comments here..."
+        ></textarea>
+        <br />
+        <br />
 
-          <input type="submit" value="Submit" />
-        </form>
-      </section>
-    </main>
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
 
     <footer>
-      <p>Advanced HTML Elements Lab</p>
+      <p>Copyright 2025 Student Profile Page. All rights reserved.</p>
     </footer>
   </body>
 </html>
